@@ -1,5 +1,8 @@
 import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import {NavLink} from 'react-router-dom';
+import HeaderComponent from './HeaderComponent';
+
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -22,7 +25,7 @@ export default class SiderDemo extends React.Component {
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
               <Icon type="pie-chart" />
-              <span>Option 1</span>
+              <span>Admin Page</span>
             </Menu.Item>
             <Menu.Item key="2">
               <Icon type="desktop" />
@@ -37,9 +40,9 @@ export default class SiderDemo extends React.Component {
                 </span>
               }
             >
-              <Menu.Item key="3">Tom</Menu.Item>
-              <Menu.Item key="4">Bill</Menu.Item>
-              <Menu.Item key="5">Alex</Menu.Item>
+              <Menu.Item key="3"><NavLink to="/"> Thêm Người Dùng </NavLink>  </Menu.Item>
+              <Menu.Item key="4"><NavLink to="/thongTinNguoiDung"> Tìm Kiếm Người Dùng </NavLink></Menu.Item>
+              {/* <Menu.Item key="5">Alex</Menu.Item> */}
             </SubMenu>
             <SubMenu
               key="sub2"
@@ -60,7 +63,9 @@ export default class SiderDemo extends React.Component {
           </Menu>
         </Sider>
         <Layout>
-          <Header style={{ background: '#fff', padding: 0 }} />
+          
+          {/* HEADER */}
+          <HeaderComponent/>
 
           {/* KHU CONTENT */}
           <Content style={{ margin: '0 16px' }}>
@@ -68,7 +73,7 @@ export default class SiderDemo extends React.Component {
                 {this.props.children}
           </Content>
 
-
+          {/* FOOTER */}
           <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
         </Layout>
       </Layout>

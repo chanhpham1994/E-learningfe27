@@ -11,8 +11,9 @@ function App() {
        <BrowserRouter>
           <Switch>
 
-              <AdminTemplate path='/' Component={ThongTinnguoiDung}/>
-              {/* <AdminTemplate/> */}
+              
+              <AdminTemplate path='/thongTinNguoiDung' Component={ThongTinnguoiDung}/>
+              
 
           </Switch>
        </BrowserRouter>
