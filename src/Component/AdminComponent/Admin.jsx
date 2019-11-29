@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Layout, Menu, Icon } from 'antd';
 import {NavLink} from 'react-router-dom';
 import HeaderComponent from './HeaderComponent';
 
@@ -25,7 +25,7 @@ export default class SiderDemo extends React.Component {
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
               <Icon type="pie-chart" />
-              <span>Admin Page</span>
+              <NavLink  style={{color:'white'}} to="/admin">  <span > Admin Page</span> </NavLink>
             </Menu.Item>
             <Menu.Item key="2">
               <Icon type="desktop" />
